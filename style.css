@@ -60,5 +60,22 @@ input{
     color: #999;
 }
 
+.btn-field button{
+    margin: 10px;
+    padding: 20px;
+    border: 0;
+    border-radius: 15px;
+}
+
+.button-sign-in{
+    background-color: rgb(11, 225, 11);
+}
+
+.button-sign-up{
+    background-color: #0b92e6;
+}
+
+
+
 
 
