@@ -3,56 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Social Media PLatform Log in / registrer page </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 
     <script src="https://kit.fontawesome.com/8d4272ce0c.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
 
-    
+    <div class="section">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="form-box">
+    <form class="formclass" id="registrerForm" method="post " action="/auth/registrer">
 
-            <h1> sign up </h1>
-            <form>
-                <div class="input-group">
-                    <div class="input-field">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="name">
-                    </div>
+        <i class="fa-solid fa-user"></i>
+        <input placeholder="Name" type="text" name="name" required pattern="^[\w]+$" title="username must only contain lower case and upper case letters, numbers and underscore (_). example">
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="email">
-                    </div>
+        <i class="fa-solid fa-envelope"></i>
+        <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requiredments">
 
-                    <div class="input-field">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="password">
-                    </div>
+        <i class="fa-solid fa-lock"></i>
+        <input placeholder="Password" type="password" name="password" required minlength="8">
 
-                    <p> Forgot password? <a href="#"> Click Here </a> </p>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input placeholder="banner" type="url" name="banner">
 
-                </div>
+        <i class="fa-solid fa-user-plus"></i>
+        <input placeholder="avatar" type="url" name="avatar">
 
-                <div class="btn-field">
-                    <button class="button-sign-up"  type="button"> Sign up </button>
-                    <button class="button-sign-in" type="button"> Sign in </button>
-                </div>
+        <button> Registrer </button>
 
-            </form>
+    </form>
+</div>
+</div>    
+</div>
+</div>
 
-
-        </div>
-
-
-    </div>
+    <script src="registrer.mjs"></script>
     
 </body>
 </html>
