@@ -1,3 +1,3 @@
-import { setRegisterFormListener } from "./registrer.mjs";
+import { setRegisterFormListener } from "./register.mjs";
 
 setRegisterFormListener()
