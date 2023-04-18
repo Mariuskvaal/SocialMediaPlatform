@@ -20,7 +20,7 @@
 
         <div class="container">
 
-    <form class="formclass" id="registerForm" method="post" action="/auth/register">
+    <form class="formclass" id="registerForm">
 
         <i class="fa-solid fa-user"></i>
         <input placeholder="Name" type="text" name="name" required pattern="^[\w]+$" title="username must only contain lower case and upper case letters, numbers and underscore (_). example">
@@ -37,16 +37,16 @@
         <i class="fa-solid fa-user-plus"></i>
         <input placeholder="avatar" type="url" name="avatar">
 
-        <button> Registrer </button>
+        <button> Register </button>
 
     </form>
 </div>
 </div>    
 </div>
 </div>
-    <script src="index.mjs"></script>
-    <script src="register.mjs"></script>
-    
+
+    <script src="register.mjs" defer type="module"></script>
+    <script src="/index.mjs" defer type="module"></script>
 
 </body>
 </html>
