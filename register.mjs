@@ -11,7 +11,7 @@ form.addEventListener("submit", (event) => {
     const profile = Object.fromEntries(formData.entries())
 
     // Send it to the API
-    register(profile);
+    register(profile)
 })
 }
 
