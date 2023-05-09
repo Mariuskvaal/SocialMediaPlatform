@@ -1,6 +1,6 @@
 import { setRegisterFormListener } from "./register.mjs";
 import { setLoginFormListener } from "./login.mjs";
-import { createPost } from "./posts.create.mjs";
+import { updatePost } from "./posts.update.mjs";
 
 
 const path = location.pathname;
@@ -11,9 +11,10 @@ if (path === '/profile/login/') {
     setRegisterFormListener()
 }
 
-createPost({
-    title: "Example posts",
-    body: "Also and example"
+updatePost({
+    id: 644,
+    title: "Example post UPDATED",
+    body: "Also and example UPDATED"
 })
 
 
