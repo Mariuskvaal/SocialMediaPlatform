@@ -1,11 +1,14 @@
 import { login } from "./auth.login.mjs";
 
+console.log(location.pathname)
+
 export function setLoginFormListener() {
 const form = document.querySelector("#loginForm");
 
 if (form) { 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
+    console.log(event.preventDefault());
     const form = event.target;
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries())
@@ -15,9 +18,4 @@ form.addEventListener("submit", (event) => {
     })
   }
 }
-
-
-
-
-
 

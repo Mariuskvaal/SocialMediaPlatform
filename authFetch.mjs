@@ -6,10 +6,8 @@ export function headers() {
     return {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`
-    },
+    }
 }
-
-
 
 export async function authFetch(url, options) {
     return fetch(url, {
