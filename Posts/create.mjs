@@ -1,6 +1,6 @@
-import { API_SOCIAL_URL } from "./api.constant.mjs";
+import { API_SOCIAL_URL } from "../api.constant.mjs";
 
-import { authFetch } from "./authFetch.mjs";
+import { authFetch } from "../authFetch.mjs";
 
 console.log(API_SOCIAL_URL);
 

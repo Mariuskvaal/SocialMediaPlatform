@@ -1,6 +1,8 @@
 import { setRegisterFormListener } from "./register.mjs";
 import { setLoginFormListener } from "./login.mjs";
-import { updatePost } from "./posts.update.mjs";
+
+import * as templates from "./templates/index.mjs"
+import * as post from "./index.api.mjs"
 
 
 const path = location.pathname;
@@ -11,16 +13,9 @@ if (path === '/profile/login/') {
     setRegisterFormListener()
 }
 
-updatePost({
-    id: 644,
-    title: "Example post UPDATED",
-    body: "Also and example UPDATED"
-})
+async function testTemplate() {
+    const posts = await post.getPosts();
+    const post = posts.pop()
 
 
-
-
-
-
-//setRegisterFormListener()
-//setLoginFormListener()
+}
