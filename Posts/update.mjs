@@ -3,7 +3,7 @@ import { API_SOCIAL_URL } from "../api.constant.mjs";
 import { authFetch } from "../authFetch.mjs";
 
 const action ="/posts";
-const method = "put"
+const method = "put";
 
 export async function updatePost(postData) {
 
