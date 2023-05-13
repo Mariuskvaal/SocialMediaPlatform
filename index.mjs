@@ -2,7 +2,7 @@ import { setRegisterFormListener } from "./register.mjs";
 import { setLoginFormListener } from "./login.mjs";
 
 import * as templates from "./templates/index.mjs"
-import * as post from "./index.api.mjs"
+import * as postMethods from "./index.api.mjs"
 
 
 const path = location.pathname;
@@ -15,7 +15,8 @@ if (path === '/profile/login/') {
 
 async function testTemplate() {
     const posts = await post.getPosts();
-    const post = posts.pop()
-
-
+    const container = document.querySelector("post")
+    templates.renderPostTemplates(posts, container);
 }
+
+testTemplate()
