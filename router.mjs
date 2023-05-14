@@ -19,7 +19,7 @@ switch (path) {
         return;
     case '/profile/edit/':
             listeners.setUpdateProfileListener()
-            return;
+        return;
 }
 }
 

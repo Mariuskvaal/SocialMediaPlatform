@@ -1,4 +1,4 @@
-import router from "./index.mjs";
+import router from "./router.mjs";
 
 router();
 
