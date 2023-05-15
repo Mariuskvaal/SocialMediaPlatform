@@ -22,4 +22,3 @@ switch (path) {
         return;
 }
 }
-
