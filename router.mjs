@@ -6,10 +6,10 @@ export default function router() {
   console.log(path);
 
   switch (path) {
-    case "/profile/login/":
+    case "/login.html":
       listeners.setLoginFormListener();
       return;
-    case "/profile/register/":
+    case "/index.html":
       listeners.setRegisterFormListener();
       return;
     case "/profile/create/":
