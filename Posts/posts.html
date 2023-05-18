@@ -17,6 +17,8 @@
     
     <script src="/index.mjs" defer type="module"></script>
 
+    <script src="/Posts/script.js"></script>
+
 </head>
 
 <body>
@@ -30,10 +32,11 @@
         <label for="hamburger-menu"><i id="label_ID" class="fa-solid fa-bars"></i> </label>
     
         <nav>
-            <a href="/index.html">REGISTER</a>
-            <a href="/login.html">LOG IN</a>
+            <!-- <a href="/index.html">REGISTER</a>
+            <a href="/login.html">LOG IN</a> -->
             <a href="/post/post.html">POST </a>
-            <a href="/post/edit/post.edit.html"> POSt-EDIT</a>
+            <a href="/post/create/create.html"> CREATE POST</a>
+            <a href="/post/edit/post.edit.html"> POST-EDIT</a>
             <a href="/Posts/posts.html"> POSTS</a>
         </nav> 
 
@@ -46,29 +49,16 @@
 
 
     <div class="section">
+        <div class=""> 
+            <div id="image-container">
+
+            </div>
+            <label> my first post </label>
+
+        </div>
 
         <div class="container">
 
-    <form class="formclass" id="">
-
-        <i class="fa-solid fa-user"></i>
-        <input placeholder="Name" type="text" name="name" required pattern="^[\w]+$" title="username must only contain lower case and upper case letters, numbers and underscore (_). example">
-
-        <i class="fa-solid fa-envelope"></i>
-        <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requiredments">
-
-        <i class="fa-solid fa-lock"></i>
-        <input placeholder="Password" type="password" name="password" required minlength="8">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input placeholder="banner" type="url" name="banner">
-
-        <i class="fa-solid fa-user-plus"></i>
-        <input placeholder="avatar" type="url" name="avatar">
-
-        <button> Register </button>
-
-    </form>
 </div>
 </div>    
 </div>

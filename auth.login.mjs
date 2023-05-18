@@ -22,6 +22,8 @@ export async function login(profile) {
 
    storage.save("profile", user)
 
+   window.location.assign("/Posts/posts.html");
+
    alert("You are now logged")
 
 

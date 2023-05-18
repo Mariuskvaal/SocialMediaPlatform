@@ -12,7 +12,7 @@ export default function router() {
     case "/index.html":
       listeners.setRegisterFormListener();
       return;
-    case "/profile/create/":
+    case "/post/create/create.html":
       listeners.setCreatePostFormListener();
       return;
     case "/post/edit/":

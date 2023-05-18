@@ -6,9 +6,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Social Media PLatform Log in / registrer page </title>
+    <title>Social Media PLatform Log in / register page </title>
 
-    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="/css/reg+log.css">
 
     <script src="https://kit.fontawesome.com/8d4272ce0c.js" crossorigin="anonymous"></script>
 
@@ -21,49 +21,28 @@
 
 <body>
 
-    <div class="nav-section">
+    <div class="log-container"> 
+        <div class="form-box">
 
-        <div class="hamburger_menu_section">
-    
-            <input type="checkbox" class="hamburger-menu-class" id="hamburger-menu">
-        
-            <label for="hamburger-menu"><i id="label_ID" class="fa-solid fa-bars"></i> </label>
-        
-        
-    
-            <nav>
+            <nav class="nav-section">
                 <a href="index.html">REGISTER</a>
                 <a href="login.html">LOG IN</a>
-                <a href="post/post.html">POST </a>
-                <a href="Post/edit/post.edit.html"> POSt-EDIT</a>
-                <a href="/Posts/posts.html"> POSTS</a>
-        
             </nav>
-    </div>
+
+            <h1> Log in </h1>
+            
+            <form class="formclass" id="loginForm">
+
+                <i class="fa-solid fa-envelope"></i>
+                <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requiredments">
+        
+                <i class="fa-solid fa-lock"></i>
+                <input placeholder="Password" type="password" name="password" required minlength="8">
+        
+                <button> Login </button>
+
+            </form>
         </div>
-
-<div> 
-        <H1 class="page-headline"> LOG IN PAGE </H1>
-</div>
-    <div class="section">
-
-        <div class="container">
-
-    <form class="formclass" id="loginForm">
-
-        <i class="fa-solid fa-envelope"></i>
-        <input placeholder="Email" type="email" name="email" required pattern="^[\w\-.]+@(stud\.)?noroff\.no$" title="please match the requiredments">
-
-        <i class="fa-solid fa-lock"></i>
-        <input placeholder="Password" type="password" name="password" required minlength="8">
-
-        <button> Login </button>
-
-    </form>
-</div>
-</div>    
-</div>
-</div>
-
+    </div>
 </body>
 </html>

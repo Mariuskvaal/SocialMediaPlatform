@@ -10,8 +10,7 @@ const method = "post"
 export async function createPost(postData) {
     const createPostURL = API_SOCIAL_URL + action;
     //const token = load("token");
-
-
+    
 
     const response = await authFetch(createPostURL, {
         method,
