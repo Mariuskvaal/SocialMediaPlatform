@@ -12,13 +12,13 @@ export default function router() {
     case "/index.html":
       listeners.setRegisterFormListener();
       return;
-    case "/post/create/create.html":
+    case "/Post/create/create.html":
       listeners.setCreatePostFormListener();
       return;
-    case "/post/edit/":
+    case "/post/edit/post.edit.html":
       listeners.setUpdatePostListener();
       return;
-    case "/profile/edit/":
+    case "/profile.edit.html":
       listeners.setUpdateProfileListener();
       return;
   }

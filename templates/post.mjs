@@ -12,9 +12,9 @@ export function postTemplateB(postData) {
         img.src = postData.media;
         img.alt = `Image from ${postData.title}`
         post.append(img)
+        return post;
     }
 
-    return post;
 
 }
 
