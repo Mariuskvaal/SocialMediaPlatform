@@ -13,10 +13,22 @@ fetch('https://api.noroff.dev/api/v1/social/posts', {
 .then(response => response.json())
 .then(json => console.log(json))
 
-const createHtml = document.querySelector("#container");
 
-createHtml.createElement('div')
 
+
+
+
+/*
+
+const container = document.querySelector("#container");
+
+Container.innerHTML += `  <a href="details2.html?id=${json[i].id}" class="card">
+                          <h2 class="overskrifblogg">${json[i].title.rendered}</h2>
+                          <div class="rendered"> ${json[i].content.rendered} </div>
+</a>` ;
+
+
+*/
 
 
 
