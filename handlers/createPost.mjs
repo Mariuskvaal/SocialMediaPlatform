@@ -3,6 +3,7 @@ import { createPost } from "../Posts/index.mjs";
 export function setCreatePostFormListener() {
   const form = document.querySelector("#createPost");
 
+
   if (form) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();

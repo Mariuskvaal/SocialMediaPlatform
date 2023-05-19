@@ -24,7 +24,7 @@ export async function login(profile) {
 
    window.location.assign("/Posts/posts.html");
 
-   alert("You are now logged")
+   alert("You are now logged in")
 
 
 }
