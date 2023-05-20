@@ -1,5 +1,5 @@
 import { API_SOCIAL_URL } from "./api.constant.mjs";
-import * as storage from "/storage.mjs"
+import * as storage from "/storage.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -16,17 +16,20 @@ export async function login(profile) {
         body
     })
 
-    const { accessToken, ...user } = await response.json()
+    console.log(response,"login");
+
+    const { accessToken, ...user } = response.json()
 
    storage.save("token", accessToken)
 
    storage.save("profile", user)
 
-   window.location.assign("/Posts/posts.html");
+ 
 
-   alert("You are now logged in")
+  if(response.ok){alert("You are now logged in"); window.location.assign("/Posts/posts.html");}    
+  else{
+    alert("User are not registered")
+  }
 
-
+   console.log(response,"login");
 }
-
-//const token = localStorage.getItem("token");

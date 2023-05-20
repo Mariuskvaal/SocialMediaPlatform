@@ -8,6 +8,7 @@ const action ="/posts";
 const method = "post"
 
 export async function createPost(postData) {
+    console.log(postData);
     const createPostURL = API_SOCIAL_URL + action;
     //const token = load("token");
     

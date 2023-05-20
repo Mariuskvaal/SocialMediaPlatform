@@ -1,10 +1,16 @@
 import { createPost } from "../Posts/index.mjs";
 
 export function setCreatePostFormListener() {
+
   const form = document.querySelector("#createPost");
+
+  console.log(form);
 
 
   if (form) {
+
+    console.log("JumpingIsHealty");
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const form = event.target;

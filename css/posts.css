@@ -57,54 +57,32 @@ nav a{
     color: black;
 }
 
-.page-headline{
-    text-align: center;
+.container{
+    max-width: 1080px;
+    margin: 20px;
+    padding: 20px;
 }
-
-
-    /* 
---------------------------------------------------------
-HEADER SECTION DONE
---------------------------------------------------------
-*/
-
-
-
 
 
 .section{
-    min-height: 100vh;
+   
 }
 
-.container{
+
+
+.card{
+    min-height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.formclass{
-    display: flex;
     flex-direction: column;
-    gap: 20px 20px;
 }
 
-.fa-solid{
-    margin: 0;
-    padding: 0;
-    padding-top: 10px;
+.postImages{
+    font-size: 18px;
+    color: blue;
+    font-weight: bold;
+    text-align: left;
 }
-
-button{
-    background-color: green;
-    color: white;
-    padding: 20px;
-    margin: 20px;
-}
-
-
-
-
-/* <!------- MEDIA QUERY -----!>  */
 
 
 @media(max-width: 700px){
