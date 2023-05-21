@@ -86,17 +86,14 @@ nav a{
 
 
 .card{
-    min-height: 200px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
 }
 
 .postImages{
-    font-size: 18px;
-    color: blue;
-    font-weight: bold;
-    text-align: left;
+    max-width: 200px;
 }
 
 

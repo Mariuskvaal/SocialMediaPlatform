@@ -25,21 +25,24 @@ const getDataPosts = async () => {
 if (!urlWithAuth.ok) {
   errorDisplay.innerHTML += '<h3 class="error-code"> No posts Found  </h3>'
 
-   // throw new Error (`HTTP error! status`);
+   //throw new Error (`HTTP error! status`);
    //console.log(urlWithAuth, "fail"); alert("There is no posts avaliable")
   }
 
   const data = await urlWithAuth.json();
-  //console.log(data);
+  console.log(data);
 
   for (let i = 0; i < data.length; i++) {
     //console.log(data[i]);
 
     container.innerHTML += `<div class="card"> 
-                          <img src=${data[i].media}/>
-                            <h2 class="postImages"> ${data[i].title} </h2>
+                          <img class="postImages" src=${data[i].media}/>
+                            <h2 class="postTitle"> ${data[i].title} </h2>
+                            <h4 class="postComment"> Comments: ${data[i]._count.comments}</h4>
+                            <h4 class="postReaction"> Reactions: ${data[i]._count.reactions}</h4>
+                            <h4 class="postReaction"> Tags: ${data[i].tags}</h4>
                         </div> `;
   }
 };
 
-//getDataPosts();
+getDataPosts();
