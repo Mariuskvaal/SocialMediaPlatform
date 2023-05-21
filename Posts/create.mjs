@@ -1,4 +1,4 @@
-import { API_SOCIAL_URL } from "/api.constant.mjs";
+/*import { API_SOCIAL_URL } from "/api.constant.mjs";
 
 import { authFetch } from "/authFetch.mjs";
 
@@ -22,3 +22,4 @@ export async function createPost(postData) {
 
 return await response.json();
 }
+*/

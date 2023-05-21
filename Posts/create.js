@@ -1,5 +1,52 @@
 import { load } from "/storage.mjs";
 
+const token = load("token");
+
+const formButton = document.querySelector("#createPost");
+
+formButton.addEventListener('submit', event => {
+  event.preventDefault();
+
+  const formData = new FormData(formButton);
+  const data = Object.fromEntries(formData);
+
+  fetch('https://api.noroff.dev/api/v1/social/posts', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.JSON())
+  .then(data => console.log(data))
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+import { load } from "/storage.mjs";
+
 const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0NywibmFtZSI6ImtvbmciLCJlbWFpbCI6ImtvbmcuaGFyYWxkQG5vcm9mZi5ubyIsImF2YXRhciI6IiIsImJhbm5lciI6IiIsImlhdCI6MTY4NDY4MjQyNn0.CEY-hyA-04sW7VJJcXx04WYrh_d1Kiq306gXTO0nyBk";
 
 console.log(token, "name2");
@@ -8,11 +55,11 @@ const container = document.querySelector("#postsInHtml");
 
 const errorDisplay = document.querySelector("#posts-error-display");
 
-const getDataPosts = async () => {
+const createPost = async () => {
   const urlWithAuth = await fetch(
     "https://api.noroff.dev/api/v1/social/posts",
     {
-      method: "get",
+      method: "post",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -45,4 +92,6 @@ if (!urlWithAuth.ok) {
   }
 };
 
-getDataPosts();
+createPost();
+
+*/
