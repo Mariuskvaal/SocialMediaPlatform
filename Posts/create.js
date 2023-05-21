@@ -1,6 +1,6 @@
 import { load } from "/storage.mjs";
 
-const token = load("token");
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTc0NywibmFtZSI6ImtvbmciLCJlbWFpbCI6ImtvbmcuaGFyYWxkQG5vcm9mZi5ubyIsImF2YXRhciI6IiIsImJhbm5lciI6IiIsImlhdCI6MTY4NDY4MjQyNn0.CEY-hyA-04sW7VJJcXx04WYrh_d1Kiq306gXTO0nyBk";
 
 const formButton = document.querySelector("#createPost");
 
@@ -8,19 +8,35 @@ formButton.addEventListener('submit', event => {
   event.preventDefault();
 
   const formData = new FormData(formButton);
-  const data = Object.fromEntries(formData);
+  //const data = Object.fromEntries(formData);
+
+  const title = formData.get("title")
+  const body = formData.get("body")
+  const tags = formData.get("tags")
+  const media = formData.get("media")
+
+  const post = {
+    title: title,
+    body: body,
+    media: media,
+  }
+
+  post.tags = [tags]
+ 
+
+  console.log(post);
 
   fetch('https://api.noroff.dev/api/v1/social/posts', {
-    method: 'POST',
+    method: 'post',
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
+      "Authorization": `Bearer ${token}`,
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(post)
   }).then(res => res.JSON())
-  .then(data => console.log(data))
+  .then(post => console.log(post))
+  .catch(error => console.log("error") )
 })
-
 
 
 
