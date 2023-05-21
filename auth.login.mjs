@@ -30,6 +30,5 @@ export async function login(profile) {
   else{
     alert("User are not registered")
   }
-
    console.log(response,"login");
 }

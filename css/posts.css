@@ -57,6 +57,21 @@ nav a{
     color: black;
 }
 
+#posts-error-display{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.error-code{
+    margin: 20px;
+    padding: 20px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+
+
 .container{
     max-width: 1080px;
     margin: 20px;

@@ -3,6 +3,8 @@ import { API_SOCIAL_URL } from "./api.constant.mjs";
 const action = "/auth/register";
 const method = "post";
 
+const registerText = document.querySelector(".reg-message");
+
 export async function register(profile) {
   const registerURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);
@@ -17,7 +19,9 @@ export async function register(profile) {
 
   const result = await response.json();
 
-  if (result.response) {
+  console.log(result);
+
+  if (result) {
     alert("You are now registered");
   } else {
     console.log(result);
