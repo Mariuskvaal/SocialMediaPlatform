@@ -53,7 +53,8 @@ const getDataPosts = async () => {
                             <h4 class="postReaction"> Reactions: ${data[i]._count.reactions}</h4>
                             <h4 class="postReaction"> Tags: ${data[i].tags}</h4>
                             <textarea id ="comment" >Your text here</textarea>
-                            <input id=submit" type="button" onclick="myFunction()" >
+                            <label for="commentbutton"> Comment </label>
+                            <input name="commentbutton" text="button" id="submit" type="button" onclick="myFunction()">
                         </div> `;
   }
 };
