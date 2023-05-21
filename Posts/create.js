@@ -8,17 +8,6 @@ const container = document.querySelector("#postsInHtml");
 
 const errorDisplay = document.querySelector("#posts-error-display");
 
-function myFunction() {
-  var name = document.getElementById("your ID name").value;
-  var comment = document.getElementById("comment");
-  var data = "Comment: " + comment;
-  document.getElementById("data").innerHTML = data;
-
-  if (!comment) {
-    alert("please fill all the box")
-  }
-}
-
 const getDataPosts = async () => {
   const urlWithAuth = await fetch(
     "https://api.noroff.dev/api/v1/social/posts",
@@ -33,11 +22,11 @@ const getDataPosts = async () => {
 
   console.log(urlWithAuth, "23");
 
-  if (!urlWithAuth.ok) {
-    errorDisplay.innerHTML += '<h3 class="error-code"> No posts Found  </h3>'
+if (!urlWithAuth.ok) {
+  errorDisplay.innerHTML += '<h3 class="error-code"> No posts Found  </h3>'
 
-    //throw new Error (`HTTP error! status`);
-    //console.log(urlWithAuth, "fail"); alert("There is no posts avaliable")
+   //throw new Error (`HTTP error! status`);
+   //console.log(urlWithAuth, "fail"); alert("There is no posts avaliable")
   }
 
   const data = await urlWithAuth.json();
@@ -52,12 +41,8 @@ const getDataPosts = async () => {
                             <h4 class="postComment"> Comments: ${data[i]._count.comments}</h4>
                             <h4 class="postReaction"> Reactions: ${data[i]._count.reactions}</h4>
                             <h4 class="postReaction"> Tags: ${data[i].tags}</h4>
-                            <textarea id ="comment" >Your text here</textarea>
-                            <input id=submit" type="button" onclick="myFunction()" >
                         </div> `;
   }
 };
-
-
 
 getDataPosts();
